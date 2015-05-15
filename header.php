@@ -52,15 +52,19 @@
 
             <!-- nav -->
             <nav class="nav" role="navigation">
+                <div class="horizontal-spacer"><div class="horizontal-spacer-inner"></div></div>
                 <?php html5blank_nav(); ?>
-                <?php
-                    $footer_page = new WP_Query('pagename=Kontakt-small');
-                    if( $footer_page ){
-                        $footer_page->the_post();
-                        //the_title();
-                        the_content();
-                        wp_reset_postdata();
-                    }
-                ?>
+                <div class="horizontal-spacer"><div class="horizontal-spacer-inner"></div></div>
+                <div class="nav-innerpage">
+                    <?php
+                        $footer_page = new WP_Query('pagename=Kontakt-small');
+                        if( $footer_page ){
+                            $footer_page->the_post();
+                            //the_title();
+                            the_content();
+                            wp_reset_postdata();
+                        }
+                    ?>
+                </div>
             </nav>
             <!-- /nav -->
