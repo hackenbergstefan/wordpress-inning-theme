@@ -145,7 +145,11 @@ main {
     letter-spacing: 1px;
 }
 
-.nav li li {
+.nav .current-menu-item > ul {
+    display: block;
+}
+
+.nav li ul {
     display: none;
 }
 
