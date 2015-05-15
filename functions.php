@@ -39,17 +39,17 @@ if (function_exists('add_theme_support'))
     ));*/
 
     // Add Support for Custom Header - Uncomment below if you're going to use
-    /*add_theme_support('custom-header', array(
-	'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
-	'header-text'			=> false,
-	'default-text-color'		=> '000',
-	'width'				=> 1000,
-	'height'			=> 198,
-	'random-default'		=> false,
-	'wp-head-callback'		=> $wphead_cb,
-	'admin-head-callback'		=> $adminhead_cb,
-	'admin-preview-callback'	=> $adminpreview_cb
-    ));*/
+    add_theme_support('custom-header', array(
+    'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
+    'header-text'			=> false,
+    'default-text-color'		=> '000',
+    'width'				=> 1000,
+    'height'			=> 198,
+    'random-default'		=> false,
+    'wp-head-callback'		=> $wphead_cb,
+    'admin-head-callback'		=> $adminhead_cb,
+    'admin-preview-callback'	=> $adminpreview_cb
+    ));
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
@@ -447,6 +447,16 @@ function html5_shortcode_demo($atts, $content = null)
 function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
 {
     return '<h2>' . $content . '</h2>';
+}
+
+/*------------------------------------*\
+ * Header banner
+\*------------------------------------*/
+
+function header_get_banner()
+{
+    $banner_bottom = "Zimmerei und Holzbau";
+    return '<div id="banner"><span id="banner-bottom">' . $banner_bottom . '</span></div>';
 }
 
 ?>

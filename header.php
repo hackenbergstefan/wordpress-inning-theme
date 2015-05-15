@@ -25,26 +25,42 @@
 	</head>
 	<body <?php body_class(); ?>>
 
+    <!-- header -->
+    <header class="header clear" role="banner">
+        <!-- header-container -->
+        <div id="header-container">
+            <a href="<?php echo home_url(); ?>">
+                <?php echo header_get_banner(); ?>
+            </a>
+            <!-- logo -->
+            <div class="logo">
+                <?php 
+                    // The header image
+                    $header_image = get_header_image();
+                    $header_image_width = HEADER_IMAGE_WIDTH;
+                    $header_image_height = HEADER_IMAGE_HEIGHT;
+                ?>
+                <img class="header-image" src="<?php header_image();?>"/>
+            </div>
+            <!-- /logo -->
+        </div>
+        <!-- /header-container -->
+    </header>
+    <!-- /header -->
 		<!-- wrapper -->
 		<div class="wrapper">
 
-			<!-- header -->
-			<header class="header clear" role="banner">
-
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
-
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
-
-			</header>
-			<!-- /header -->
+            <!-- nav -->
+            <nav class="nav" role="navigation">
+                <?php html5blank_nav(); ?>
+                <?php
+                    $footer_page = new WP_Query('pagename=Kontakt-small');
+                    if( $footer_page ){
+                        $footer_page->the_post();
+                        //the_title();
+                        the_content();
+                        wp_reset_postdata();
+                    }
+                ?>
+            </nav>
+            <!-- /nav -->
