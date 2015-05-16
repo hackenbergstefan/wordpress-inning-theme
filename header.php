@@ -58,7 +58,7 @@
                 </nav>
                 <!-- /nav -->
                 <div class="horizontal-spacer"><div class="horizontal-spacer-inner"></div></div>
-                <div class="nav-innerpage">
+                <div id="contact_small" class="nav-innerpage">
                 <?php 
                     $contact_page = new WP_Query('pagename=Kontakt');
                     if( $contact_page ){
