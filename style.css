@@ -338,6 +338,13 @@ section a {
     text-decoration: underline;
 }
 
+section h2 .date {
+    float: right;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+
 /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
