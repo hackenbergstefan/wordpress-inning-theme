@@ -362,6 +362,16 @@ section a {
     .nav-container {
         float: none;
     }
+    .nav {
+        margin-left: -30px
+    }
+    .nav-innerpage {
+        margin-left: 0;
+    }
+
+    .horizontal-spacer-inner {
+        margin: 0 0 0 0;
+    }
 
     main {
         width: 90%;
