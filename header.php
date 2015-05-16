@@ -50,10 +50,13 @@
 		<!-- wrapper -->
 		<div class="wrapper">
 
-            <!-- nav -->
-            <nav class="nav" role="navigation">
+            <div class="nav-container"/> <!-- nav-container -->
                 <div class="horizontal-spacer"><div class="horizontal-spacer-inner"></div></div>
-                <?php html5blank_nav(); ?>
+                <!-- nav -->
+                <nav class="nav" role="navigation">
+                    <?php html5blank_nav(); ?>
+                </nav>
+                <!-- /nav -->
                 <div class="horizontal-spacer"><div class="horizontal-spacer-inner"></div></div>
                 <div class="nav-innerpage">
                     <?php
@@ -66,5 +69,8 @@
                         }
                     ?>
                 </div>
-            </nav>
-            <!-- /nav -->
+                <div class="horizontal-spacer"><div class="horizontal-spacer-inner"></div></div>
+                <div class="nav-innerpage">
+                    <p><a href="mailto:info@holzbau-inning.de">info@holzbau-inning.de</a></p>
+                </div>
+            </div> <!-- nav-container -->

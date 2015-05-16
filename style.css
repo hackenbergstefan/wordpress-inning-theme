@@ -107,7 +107,7 @@ main {
 }
 
 /* nav */
-.nav {
+.nav-container {
     width: 200px;
     vertical-align: top;
     display: inline-block;
