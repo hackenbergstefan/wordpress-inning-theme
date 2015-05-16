@@ -173,6 +173,10 @@ main {
     margin-left: 30px;
 }
 
+#contact_small {
+    background: url(img/greatArrow.png) top right no-repeat;
+}
+
 /* header */
 #banner {
     width: 320px;
