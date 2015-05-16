@@ -315,6 +315,10 @@ main h2 {
     clear: both;
 }
 
+main a {
+    text-decoration: underline;
+}
+
 /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
