@@ -302,6 +302,19 @@ main {
     font-style:normal;
 }
 
+
+main h2 {
+    font-size: 1em;
+    margin: 1em 0px 1em -20px;
+    padding: 4px 0 4px 20px;
+    background: #666;
+    color: white;
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
+    border-right: solid 1px gray;
+    clear: both;
+}
+
 /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
