@@ -285,6 +285,17 @@ main {
 }
 
 
+/* special page sitemap */
+#sitemap {
+    padding-left: 10%;
+}
+
+#sitemap li {
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+
 /*------------------------------------*\
     IMAGES
 \*------------------------------------*/

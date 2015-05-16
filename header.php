@@ -59,24 +59,8 @@
                 <!-- /nav -->
                 <div class="horizontal-spacer"><div class="horizontal-spacer-inner"></div></div>
                 <div id="contact_small" class="nav-innerpage">
-                <?php 
-                    $contact_page = new WP_Query('pagename=Kontakt');
-                    if( $contact_page ){
-                        $contact_page->the_post();
-                        $link_to_contact = get_permalink(get_the_ID());
-                    }
-                    wp_reset_postdata();
-                ?>
-                <a href="<?php echo $link_to_contact ?>">
-                    <?php
-                        $footer_page = new WP_Query('pagename=Kontakt-small');
-                        if( $footer_page ){
-                            $footer_page->the_post();
-                            //the_title();
-                            the_content();
-                        }
-                        wp_reset_postdata();
-                    ?>
+                <a href="<?php echo get_permalink(get_page_by_name('Kontakt')->ID) ?>">
+                    <?php echo get_page_by_name('Kontakt-small')->post_content; ?>
                 </a>
                 </div>
                 <div class="horizontal-spacer"><div class="horizontal-spacer-inner"></div></div>

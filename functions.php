@@ -491,11 +491,10 @@ function generate_sitemap( $non_menu_pages = ['Kontakt', 'Impressum'] )
     $menulist = $doc->getElementsByTagName('ul')[0];
 
     foreach( $non_menu_pages as $i ){
-        $page = new WP_Query('pagename=' . $i);
+        $page = get_page_by_name( $i );
         if( $page ){
-            $page->the_post();
-            $link = get_permalink(get_the_ID());
-            $title = get_the_title();
+            $link = get_permalink($page->ID);
+            $title = $page->post_title;
             $el = $doc->createDocumentFragment();
             $el->appendXML('<li><a href="' . $link . '">' . $title . '</a></li>');
             $menulist->appendChild($el);
@@ -506,4 +505,27 @@ function generate_sitemap( $non_menu_pages = ['Kontakt', 'Impressum'] )
 
 
     echo $doc->saveXML($doc->getElementsByTagName('ul')[0]);
+}
+
+
+
+/*------------------------------------*\
+ * Advanced page query
+\*------------------------------------*/
+
+/**
+ * For detailed description on resulting array read
+ * https://codex.wordpress.org/Function_Reference/get_pages
+ */
+function get_page_by_name( $pagename )
+{
+    //echo "query for page: $pagename";
+    $pages = get_pages('post_type=page');
+    foreach( $pages as $p ){
+        if( $p->post_title == $pagename ){
+            //echo "\npage found: $p->ID";
+            return $p;
+        }
+    }
+    return NULL;
 }

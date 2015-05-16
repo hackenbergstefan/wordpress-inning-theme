@@ -1,14 +1,6 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-                <?php
-                    $footer_page = new WP_Query('pagename=Footer');
-                    if( $footer_page ){
-                        $footer_page->the_post();
-                        //the_title();
-                        the_content();
-                        wp_reset_postdata();
-                    }
-                ?>
+                <?php echo get_page_by_name('Footer')->post_content; ?>
 			</footer>
 			<!-- /footer -->
 
