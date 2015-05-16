@@ -487,7 +487,7 @@ function generate_sitemap( $non_menu_pages = ['Kontakt', 'Impressum'] )
 
     $menu = wp_nav_menu( $defaults );
     $doc = new DOMDocument();
-    $doc->loadHTML($menu);
+    $doc->loadHTML('<?xml encoding="utf-8" ?>'.$menu);
     $menulist = $doc->getElementsByTagName('ul')[0];
 
     foreach( $non_menu_pages as $i ){
@@ -499,10 +499,7 @@ function generate_sitemap( $non_menu_pages = ['Kontakt', 'Impressum'] )
             $el->appendXML('<li><a href="' . $link . '">' . $title . '</a></li>');
             $menulist->appendChild($el);
         }
-        wp_reset_postdata();
-
     }
-
 
     echo $doc->saveXML($doc->getElementsByTagName('ul')[0]);
 }
