@@ -29,9 +29,6 @@
     <header class="header clear" role="banner">
         <!-- header-container -->
         <div id="header-container">
-            <a href="<?php echo home_url(); ?>">
-                <?php echo header_get_banner(); ?>
-            </a>
             <!-- logo -->
             <div class="logo">
                 <?php 
@@ -43,6 +40,9 @@
                 <img class="header-image" src="<?php header_image();?>"/>
             </div>
             <!-- /logo -->
+            <a href="<?php echo home_url(); ?>">
+                <?php echo header_get_banner(); ?>
+            </a>
         </div>
         <!-- /header-container -->
     </header>

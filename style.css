@@ -79,17 +79,17 @@ input:focus {
 	border:1px solid #04A4CC;
 }
 
+
 main {
-    display: block;
-    width: 760px;
-    vertical-align: top;
+    overflow: hidden;
+}
+
+section {
     min-height: 50px;
+    min-width: 300px;
     margin: 0 0 0 0;
     padding: 20px 20px 20px 20px;
-    float: right;
-    position: relative;
     background: #fff;
-    /*overflow: visible;*/
     border-left: solid 1px gray;
     border-right: solid 1px gray;
     border-bottom: solid 1px gray;
@@ -101,16 +101,17 @@ main {
 
 /* wrapper */
 .wrapper {
-    width: 960px;
+    width: 90%;
+    max-width: 960px;
 	margin:0 auto;
 	position:relative;
 }
 
 /* nav */
 .nav-container {
+    float: left;
     width: 200px;
     vertical-align: top;
-    display: inline-block;
 }
 
 .nav ul {
@@ -187,20 +188,23 @@ main {
     top: -15px;
     overflow: visible;
     background: #fff url(./img/logo_inning_small.png) no-repeat;
+    background-size: contain;
     border: solid 1px gray;
     text-align: center;
     color: #662006;
 }
 
 #banner-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     letter-spacing: 2px;
-    position: relative;
-    top: 80px;
 }
 
 .header {
     position: relative;
-    height: 300px;
+    /*height: 300px;*/
     background: #555;
     border-bottom: solid 1px gray;
     border-top: solid 1px gray;
@@ -209,17 +213,18 @@ main {
 #header-container {
     display: block;
     position: relative;
-    width: 960px;
+    width: 90%;
+    max-width: 960px;
     margin: 0px auto;
 }
 
 .header .logo {
-    position: absolute;
-    top: -1px;
+    position: relative;
 }
 
 .header a {
-    position: relative;
+    position: absolute;
+    top: 0;
 }
 
 
@@ -240,20 +245,19 @@ main {
 /* spacer */
 
 .horizontal-spacer {
+    position: relative;
     height: 10px;
     width: 100%;
-    overflow: visible;
     padding: 10px 0 0 0;
     font-size: 1px;
+    overflow: visible;
 }
 
 .horizontal-spacer-inner {
-    width: 83%;
-    height: 2px;
-    margin: 0 0 0 0;
-    background: #888;
     position: relative;
-    left: 40px;
+    height: 2px;
+    margin: 0 0 0 40px;
+    background: #888;
     z-index: 0;
     font-size: 1px;
 }
@@ -279,7 +283,7 @@ main {
     /*right: 42px;*/
     position: absolute;
     top: -40px;
-    left: -1px;
+    left: 200px;
     height: 40px;
     vertical-align: center;
 }
@@ -318,7 +322,7 @@ main {
 }
 
 
-main h2 {
+section h2 {
     font-size: 1em;
     margin: 1em 0px 1em -20px;
     padding: 4px 0 4px 20px;
@@ -330,7 +334,7 @@ main h2 {
     clear: both;
 }
 
-main a {
+section a {
     text-decoration: underline;
 }
 
@@ -341,8 +345,37 @@ main a {
 @media only screen and (min-width:320px) {
 
 }
-@media only screen and (min-width:480px) {
+@media only screen and (max-width:480px) {
+    #banner-bottom {
+        font-size: 2vw;
+    }
+    
+    .header a {
+        width: 40%;
+        height: 28%;
+    }
 
+    #banner {
+        width: 100%;
+        height: 160%;
+    }
+    .nav-container {
+        float: none;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    section {
+        min-width: 0;
+    }
+    .page-title {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding-right: 2px;
+    }
 }
 @media only screen and (min-width:768px) {
 
