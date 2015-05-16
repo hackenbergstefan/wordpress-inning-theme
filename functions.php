@@ -459,4 +459,51 @@ function header_get_banner()
     return '<div id="banner"><span id="banner-bottom">' . $banner_bottom . '</span></div>';
 }
 
-?>
+/*------------------------------------*\
+ * Sitemap
+\*------------------------------------*/
+
+
+function generate_sitemap( $non_menu_pages = ['Kontakt', 'Impressum'] )
+{
+    $defaults = array(
+        'theme_location'  => '',
+        'menu'            => '',
+        'container'       => 'div',
+        'container_class' => '',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => false,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul>%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => ''
+    );
+
+    $menu = wp_nav_menu( $defaults );
+    $doc = new DOMDocument();
+    $doc->loadHTML($menu);
+    $menulist = $doc->getElementsByTagName('ul')[0];
+
+    foreach( $non_menu_pages as $i ){
+        $page = new WP_Query('pagename=' . $i);
+        if( $page ){
+            $page->the_post();
+            $link = get_permalink(get_the_ID());
+            $title = get_the_title();
+            $el = $doc->createDocumentFragment();
+            $el->appendXML('<li><a href="' . $link . '">' . $title . '</a></li>');
+            $menulist->appendChild($el);
+        }
+        wp_reset_postdata();
+
+    }
+
+
+    echo $doc->saveXML($doc->getElementsByTagName('ul')[0]);
+}
