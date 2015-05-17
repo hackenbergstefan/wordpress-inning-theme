@@ -20,6 +20,8 @@
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
                     <?php the_content(); ?>
+
+                    <?php edit_post_link(); ?>
                 </article>
                 <!-- /article -->
                 <?php wp_reset_postdata(); ?>
