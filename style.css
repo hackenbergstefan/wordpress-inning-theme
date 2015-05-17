@@ -99,6 +99,10 @@ section {
     border-bottom: solid 1px gray;
 }
 
+article {
+    overflow: hidden;
+}
+
 /*------------------------------------*\
     STRUCTURE
 \*------------------------------------*/
