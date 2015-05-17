@@ -28,20 +28,20 @@
 /* html element 62.5% font-size for REM use */
 html {
 	font-size:100%;
-    background: #ffffff;
+    background: #ffffff url(img/woodtexture_white.jpg) repeat; /* 80% opacity */
 }
 body {
     padding-top: 20px;
 	font:300 12px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color:#444;
-    background: rgb(239,239,239); /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,239,239,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(239,239,239,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(239,239,239,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(239,239,239,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom, rgba(239,239,239,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    /*background: rgb(239,239,239); [> Old browsers <]*/
+    /*background: -moz-linear-gradient(top, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 100%); [> FF3.6+ <]*/
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,239,239,1)), color-stop(100%,rgba(255,255,255,1))); [> Chrome,Safari4+ <]*/
+    /*background: -webkit-linear-gradient(top, rgba(239,239,239,1) 0%,rgba(255,255,255,1) 100%); [> Chrome10+,Safari5.1+ <]*/
+    /*background: -o-linear-gradient(top, rgba(239,239,239,1) 0%,rgba(255,255,255,1) 100%); [> Opera 11.10+ <]*/
+    /*background: -ms-linear-gradient(top, rgba(239,239,239,1) 0%,rgba(255,255,255,1) 100%); [> IE10+ <]*/
+    /*background: linear-gradient(to bottom, rgba(239,239,239,1) 0%,rgba(255,255,255,1) 100%); [> W3C <]*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#ffffff',GradientType=0 ); [> IE6-9 <]*/
 }
 /* clear */
 .clear:before,
@@ -125,7 +125,7 @@ section {
 
 .nav a{
     display:block;
-    padding: 4px 0 4px 10px;
+    padding: 4px 0px 4px 10px;
     right: 0;
 }
 
@@ -145,7 +145,7 @@ section {
 
 .nav .current-menu-parent > a {
     background: none;
-    padding: 4px 0 4px 10px;
+    padding: 4px 1px 4px 10px;
     border: none;
     color: #444;
     letter-spacing: 0px;
@@ -205,9 +205,10 @@ section {
 .header {
     position: relative;
     /*height: 300px;*/
-    background: #555;
+    /*background: #555;*/
     border-bottom: solid 1px gray;
     border-top: solid 1px gray;
+    background: #555 url(img/woodtexture.jpg) repeat-x;
 }
 
 #header-container {
@@ -216,6 +217,8 @@ section {
     width: 90%;
     max-width: 960px;
     margin: 0px auto;
+    border-left: solid 3px #332003;
+    border-right: solid 3px #332003;
 }
 
 .header .logo {
