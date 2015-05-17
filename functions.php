@@ -507,7 +507,7 @@ function generate_sitemap( $non_menu_pages = ['Kontakt', 'Impressum'] )
 
 
 /*------------------------------------*\
- * Advanced page query
+ * Advanced queries
 \*------------------------------------*/
 
 /**
@@ -525,4 +525,13 @@ function get_page_by_name( $pagename )
         }
     }
     return NULL;
+}
+
+
+function get_category_id( $categoryname )
+{
+    foreach((get_categories()) as $category) { 
+        if( $category->name == $categoryname )
+            return $category->cat_ID;
+    }
 }
