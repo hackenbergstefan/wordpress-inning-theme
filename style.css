@@ -28,6 +28,10 @@
 /* html element 62.5% font-size for REM use */
 html {
 	font-size:100%;
+    /**
+     * Texture comes with CC License
+     * It was created by Naomi Rubin (https://www.flickr.com/photos/naomiyaki/4583474627/)
+     */
     background: #ffffff url(img/woodtexture_white.jpg) repeat; /* 80% opacity */
 }
 body {
@@ -208,6 +212,10 @@ section {
     /*background: #555;*/
     border-bottom: solid 1px gray;
     border-top: solid 1px gray;
+    /**
+     * Texture comes with CC License
+     * It was created by Naomi Rubin (https://www.flickr.com/photos/naomiyaki/4583474627/)
+     */
     background: #555 url(img/woodtexture.jpg) repeat-x;
 }
 
