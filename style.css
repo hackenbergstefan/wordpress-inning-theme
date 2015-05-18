@@ -86,21 +86,25 @@ input:focus {
 
 main {
     overflow: hidden;
+    padding: 0 0 0 0;
 }
 
 section {
     min-height: 50px;
     min-width: 300px;
     margin: 0 0 0 0;
-    padding: 20px 20px 20px 20px;
+    /*padding: 20px 20px 20px 20px;*/
+    padding: 0 0 0 0;
     background: #fff;
     border-left: solid 1px gray;
     border-right: solid 1px gray;
     border-bottom: solid 1px gray;
+    overflow: hidden;
 }
 
 article {
     overflow: hidden;
+    padding: 20px 20px 20px 20px;
 }
 
 /*------------------------------------*\
@@ -362,9 +366,9 @@ article {
 }
 
 
-section h2 {
+article h2 {
     font-size: 1em;
-    margin: 1em 0px 1em -20px;
+    margin: 0 0px 1em -20px;
     padding: 4px 0 4px 20px;
     background: #666;
     color: white;
@@ -374,11 +378,11 @@ section h2 {
     clear: both;
 }
 
-section a {
+article a {
     text-decoration: underline;
 }
 
-section h2 .date {
+article h2 .date {
     float: right;
     margin-right: 20px;
     font-weight: normal;
