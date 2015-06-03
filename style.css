@@ -38,6 +38,7 @@ body {
     padding-top: 20px;
 	font:300 12px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color:#444;
+    min-width: 600px;
     /*background: rgb(239,239,239); [> Old browsers <]*/
     /*background: -moz-linear-gradient(top, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 100%); [> FF3.6+ <]*/
     /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,239,239,1)), color-stop(100%,rgba(255,255,255,1))); [> Chrome,Safari4+ <]*/
@@ -91,7 +92,6 @@ main {
 
 section {
     min-height: 50px;
-    min-width: 300px;
     margin: 0 0 0 0;
     /*padding: 20px 20px 20px 20px;*/
     padding: 0 0 0 0;
@@ -394,46 +394,46 @@ article h2 .date {
 
 }
 @media only screen and (max-width:480px) {
-    #banner-bottom {
-        font-size: 2vw;
-    }
+    /*#banner-bottom {*/
+        /*font-size: 2vw;*/
+    /*}*/
     
-    .header a {
-        width: 40%;
-        height: 28%;
-    }
+    /*.header a {*/
+        /*width: 40%;*/
+        /*height: 28%;*/
+    /*}*/
 
-    #banner {
-        width: 100%;
-        height: 160%;
-    }
-    .nav-container {
-        float: none;
-    }
-    .nav {
-        margin-left: -30px
-    }
-    .nav-innerpage {
-        margin-left: 0;
-    }
+    /*#banner {*/
+        /*width: 100%;*/
+        /*height: 160%;*/
+    /*}*/
+    /*.nav-container {*/
+        /*float: none;*/
+    /*}*/
+    /*.nav {*/
+        /*margin-left: -30px*/
+    /*}*/
+    /*.nav-innerpage {*/
+        /*margin-left: 0;*/
+    /*}*/
 
-    .horizontal-spacer-inner {
-        margin: 0 0 0 0;
-    }
+    /*.horizontal-spacer-inner {*/
+        /*margin: 0 0 0 0;*/
+    /*}*/
 
-    main {
-        width: 100%;
-    }
+    /*main {*/
+        /*width: 100%;*/
+    /*}*/
 
-    section {
-        min-width: 0;
-    }
-    .page-title {
-        position: relative;
-        top: 0;
-        left: 0;
-        padding-right: 2px;
-    }
+    /*section {*/
+        /*min-width: 0;*/
+    /*}*/
+    /*.page-title {*/
+        /*position: relative;*/
+        /*top: 0;*/
+        /*left: 0;*/
+        /*padding-right: 2px;*/
+    /*}*/
 }
 @media only screen and (min-width:768px) {
 
